@@ -1,0 +1,49 @@
+{
+  "name": "joblocal/todoservice",
+  "description": "The joblocal todoservice programming challenge.",
+  "keywords": ["joblocal", "todoservice", "challenge"],
+  "license": "proprietary",
+  "type": "project",
+  "require": {
+    "php": ">=5.6.4",
+    "laravel/lumen-framework": "5.5.*",
+    "vlucas/phpdotenv": "~2.2"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "~1.4",
+    "phpunit/phpunit": "~6.0",
+    "mockery/mockery": "~0.9",
+    "brainmaestro/composer-git-hooks": "^2",
+    "fiunchinho/phpunit-randomizer": "^3",
+    "squizlabs/php_codesniffer": "^3"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/",
+      "database/"
+    ]
+  },
+  "scripts": {
+    "post-install-cmd": "vendor/bin/cghooks add --ignore-lock",
+    "post-update-cmd": "vendor/bin/cghooks update",
+    "lint": "./vendor/bin/phpcs --standard=phpcs.xml --colors -p .",
+    "test": "./vendor/bin/phpunit-randomizer -c phpunit.xml --order rand",
+    "start": "php -S localhost:8000 -t public",
+    "confirm": [
+      "@composer run lint",
+      "@composer run test"
+    ]
+  },
+  "extra": {
+    "pre-commit": "composer run lint",
+    "pre-push": "composer run confirm"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "optimize-autoloader": true
+}
