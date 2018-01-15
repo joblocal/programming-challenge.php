@@ -3,19 +3,18 @@
 ## Objective
 
 Implement a ToDo-Service which can be used via a RESTful API.
+For an example frontend application have a look [here](http://todomvc.com/examples/vue/).
 
 Key features:
- * Provide an [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)-API-Endpoint for a ToDo-List
  * Store ToDo-Items in a database (use any database driver you like, e.g. SQLite)
- * Provide a useful API documentation 
+ * A ToDo-Item consists of at least a 'title' (string, required)
+ * Provide a [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)- and [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer)-API-Endpoint for a ToDo-List
  * Write tests for your API-Endpoints & Models
- * A ToDo-Item consists of at least a title
- * Feel free to add a history feature
+ * GIT repository with meaningful commit messages
  
 Nice to haves:
  * +1 [JSON API Spec](http://jsonapi.org/)
- * +1 use an existing standard for API documentation
- * +1 GIT repository with meaningful commit messages
+ * +1 Provide a meaningful API documentation 
 
 ## Installation / Getting started
 
