@@ -40,8 +40,10 @@
     ]
   },
   "extra": {
-    "pre-commit": "composer run lint",
-    "pre-push": "composer run confirm"
+    "hooks": {
+      "pre-commit": "composer run lint",
+      "pre-push": "composer run confirm"
+    }
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
