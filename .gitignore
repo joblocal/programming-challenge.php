@@ -1,3 +1,4 @@
 /vendor
+/.idea
 .env
-cghooks.lock
+.phpunit.result.cache
